@@ -135,6 +135,8 @@ Rac::Rac(){
 
 void Rac::set_mcd(){
 	int M,N,tmp;
+	if((n!=0)&&(d!=0)){
+		
 	if(n>d){
 		M=n;N=d;
 	}else{
@@ -145,6 +147,9 @@ void Rac::set_mcd(){
 		N=tmp;
 	}/*cuando este while termina, en N se tiene el mcd*/
 	mcd=N;
+}else{
+
+	mcd=1;}
 }
 Rac& Rac::operator+(Rac& RacObj){
 	Rac RacResult;

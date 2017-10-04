@@ -77,14 +77,18 @@ void driverPolinomio(void){
   ImpPol(Polinomio2);
   
   Rac *unRacPt2=new Rac[5];
-  *(unRacPt2+0)=Rac(5,20);	/* a_{2} */
-  *(unRacPt2+1)=Rac(7,2);	/* a_{1} */
-  *(unRacPt2+2)=Rac(18,5);
-  *(unRacPt2+3)=Rac(4,3);
-  *(unRacPt2+4)=Rac(5,8);
+  *(unRacPt2+0)=Rac(5,20);	/* a_{4} */
+  *(unRacPt2+1)=Rac(7,2);	/* a_{3} */
+  *(unRacPt2+2)=Rac(18,5);	// a_{2}
+  *(unRacPt2+3)=Rac(4,3);	// a_{1}
+  *(unRacPt2+4)=Rac(5,8);	// a_{0}
   
   Polinomio Polinomio3(4,unRacPt2);
-  ImpPol(Polinomio3);
+  Polinomio Polinomio4(4,unRacPt2);
+
+	cout<<"Polinomio1 * Polinomio 2"<<endl;
+  Polinomio4= Polinomio1*Polinomio2;	
+  ImpPol(Polinomio4);
 }
 
 void ImpPol(Polinomio a){
