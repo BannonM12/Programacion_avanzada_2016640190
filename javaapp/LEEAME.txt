@@ -1,0 +1,3 @@
+Actualización 2017/11/30 
+
+Se colocó el gridbaglaoyout y se hizo que la ventana que proviene del menu fuera modal.
