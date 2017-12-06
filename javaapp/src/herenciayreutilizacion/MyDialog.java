@@ -12,6 +12,7 @@ import java.awt.Dimension;
 import java.awt.Frame;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
+import java.awt.TextArea;
 import java.awt.Window;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
@@ -20,13 +21,16 @@ import javax.swing.JButton;
 import javax.swing.JDialog;
 import java.awt.event.ActionListener; 
 import java.awt.event.ActionEvent;
+import java.util.concurrent.TimeUnit;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 
 /**
  *
  * @author Brandon
  */
-public class MyDialog {
+public class MyDialog implements ActionListener {
 //Dialog D;
 JDialog D;
 Checkbox CB1,CB2,CB3,CB4,CB5;
@@ -55,13 +59,14 @@ CB5.setVisible(true);
 //CB.setLocationRelativeTo(null);
 Bc.setVisible(true);
 Bc.setMaximumSize(new Dimension(60,20));
+Bc.addActionListener(this);
 //Bc.addActionListener(new Listenboton());
 //Bc.setLocationRelativeTo(null);
 //F= new Frame("Editor lineaxlinea");
 //Ba.setLocationRelativeTo(null);
 Ba.setVisible(true);
 Ba.setMaximumSize(new Dimension(60,20));
-//Ba.addActionListener(new Listenboton());
+Ba.addActionListener(this);
 D.add(Bc);
 D.add(Ba);
 D.add(CB1);
@@ -75,6 +80,7 @@ D.addWindowListener(new WindowAdapter(){
         //System.exit(0);  
     } 
 });
+
 
 GridBagConstraints c = new GridBagConstraints();
 D.setLayout(caracol);
@@ -137,6 +143,8 @@ D.setLayout(caracol);
  c.ipadx=30;
  caracol.setConstraints(Bc, c);
  
+
+
  
 D.setModal(true);
 D.setVisible(true);
@@ -144,6 +152,40 @@ D.setVisible(true);
  //caracol.addLayoutComponent(CB);
 //Ba.addActionListener(this);
 }
+
+public void actionPerformed(ActionEvent ae){
+       Boolean Bool=false;
+       Dialog Aceptar = null;
+        TextArea TA= new TextArea();
+        //Aceptar.add(TA);
+       if(ae.getSource().equals(Bc)){  //PASO 5 qué vamos a hacer XDXDXDDXDDDDDDDDDD
+           System.out.println("Algo pasó");
+           Aceptar= new Dialog(Aceptar,"Se ha rechazado la votación");
+           Aceptar.setSize(300, 200);
+           Aceptar.setVisible(true);
+           try {
+               TimeUnit.SECONDS.sleep(2);
+           } catch (InterruptedException ex) {
+               Logger.getLogger(MyDialog.class.getName()).log(Level.SEVERE, null, ex);
+           }
+           D.dispose();
+           Aceptar.dispose();
+        }
+       if(ae.getSource().equals(Ba)){
+            System.out.println("Algo pasó");
+            Aceptar= new Dialog(Aceptar,"Se ha aceptado la votación");
+            Aceptar.setSize(300, 200);
+            //TA.setText("Se ha rechazado la votación");
+            Aceptar.setVisible(true);
+           try {
+               TimeUnit.SECONDS.sleep(2);
+           } catch (InterruptedException ex) {
+               Logger.getLogger(MyDialog.class.getName()).log(Level.SEVERE, null, ex);
+           }
+            D.dispose();
+            Aceptar.dispose();
+       }
+    }
 
     public static void main(String[] args) {
         String cargos[]=null;

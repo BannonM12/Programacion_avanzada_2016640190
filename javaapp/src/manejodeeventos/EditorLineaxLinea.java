@@ -40,7 +40,7 @@ public class EditorLineaxLinea implements ActionListener{ //PASO 2----implementa
     TextField TF;
     GridLayout GL;
     BorderLayout BL;
-    public EditorLineaxLinea(){
+    public EditorLineaxLinea(){     //CONSTRUCTOR
     F= new Frame("Editor lineaxlinea");
     TA= new TextArea();
     F.setLayout(BL= new BorderLayout());
