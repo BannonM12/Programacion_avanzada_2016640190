@@ -27,6 +27,8 @@ Se agregaron los siguientes archivos al proyecto:
 RXTXcomm.jar	  (Para MACOS)
 RXTX-2.1-7        (Para MACOS)
 
+El código para programar el Arduino, se encuentra en la carpeta SOFTWARE-- display7serial.ino
+
 *********************************************************************************
 ArduinoIDE version 1.8.5 para MACOS
 *********************************************************************************
