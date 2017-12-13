@@ -1,0 +1,32 @@
+
+Proyectochido==Intérprete de órdenes.
+IDE: Dev-C++ version 5.11.
+Agregar archivo Expresion.O al compilador que se encuentra en la carpeta:
+Proectochido/DevC++_5.11_Linking_Time/32_Bits ó 64_Bits
+*******************************************************************************
+
+javaapp==Elecciones.
+IDE: NetBeans versión 8.2 para Windows 64 bits.
+javaversion: 1.8.0_131
+
+********************************************************************************
+
+pruebajavaduino== ProeyctoSerial
+Fue desarrollado en MACOS.
+La conexión con arduino se realizó con un módulo PL2303 USB a Serial TTL.
+Se anexa el driver del módulo en la carpeta software.
+Product Version: NetBeans IDE 8.2 (Build 201609300101)
+Updates: Updates available to version NetBeans 8.2 Patch 2
+Java: 1.8.0_151; Java HotSpot(TM) 64-Bit Server VM 25.151-b12
+Runtime: Java(TM) SE Runtime Environment 1.8.0_151-b12
+System: Mac OS X version 10.13.1 running on x86_64; UTF-8; en_US (nb)
+Se agregaron los siguientes archivos al proyecto:
+RXTXcomm.jar	  (Para MACOS)
+RXTX-2.1-7        (Para MACOS)
+
+*********************************************************************************
+ArduinoIDE version 1.8.5 para MACOS
+*********************************************************************************
+Los instaladores se encuentran en la red pero agregaremos el
+NetBeans IDE 8.2 para Windows 64 bits dentro de la carpeta Software.
+
